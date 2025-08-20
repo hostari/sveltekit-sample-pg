@@ -4,6 +4,9 @@
 ARG BUN_VERSION=1.2.19
 FROM oven/bun:${BUN_VERSION}-slim AS base
 
+# Base arguments 
+ARG DATABASE_URL="dummy"
+    
 LABEL fly_launch_runtime="SvelteKit"
 
 # SvelteKit app lives here
@@ -11,10 +14,6 @@ WORKDIR /app
 
 # Set production environment
 ENV NODE_ENV="production"
-
-# Accept DATABASE_URL as build argument and set as environment variable
-ARG DATABASE_URL
-ENV DATABASE_URL=${DATABASE_URL}
 
 
 # Throw-away build stage to reduce size of final image
@@ -49,4 +48,5 @@ COPY --from=build /app/package.json /app
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
+ENV DATABASE_URL="dummy"
 CMD [ "bun", "run", "start" ]

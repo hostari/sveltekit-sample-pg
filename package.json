@@ -43,8 +43,11 @@
   "dockerfile": {
     "envs": {
       "deploy": {
-        "DATABASE_URL": "postgresql://postgres:IwG1mMo4QggeheErN4acoLCDV2Aal2lAtT0ZxKHU1kxjKeINjxQwgPTrZHx1fmHt@nvg-service-24:5432/postgres"
+        "DATABASE_URL": "dummy"
       }
+    },
+    "args": {
+      "base": {}
     }
   }
 }
