@@ -45,4 +45,5 @@ COPY --from=build /app/package.json /app
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
+ENV DATABASE_URL="postgresql://postgres:IwG1mMo4QggeheErN4acoLCDV2Aal2lAtT0ZxKHU1kxjKeINjxQwgPTrZHx1fmHt@nvg-service-24:5432/postgres"
 CMD [ "bun", "run", "start" ]
