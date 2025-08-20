@@ -40,7 +40,7 @@
 			</div>
 
 			<div class="space-y-6">
-				{#each data.messages as message}
+				{#each data.messages as message (message.id)}
 					<MessageCard {message} />
 				{/each}
 			</div>

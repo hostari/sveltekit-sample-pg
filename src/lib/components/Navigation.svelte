@@ -18,7 +18,7 @@
 			<div class="flex items-center space-x-8">
 				<a href="/" class="text-2xl font-bold text-gray-800">📖 Digital Guestbook</a>
 				<div class="flex space-x-4">
-					{#each navItems as item}
+					{#each navItems as item (item.href)}
 						<a
 							href={item.href}
 							class="px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 {$page

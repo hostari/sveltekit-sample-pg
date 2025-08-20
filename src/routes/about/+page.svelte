@@ -9,9 +9,9 @@
 		<div class="bg-white rounded-lg shadow-lg p-8 mb-8">
 			<h2 class="text-3xl font-bold text-gray-800 mb-6">📖 Digital Guestbook</h2>
 			<p class="text-lg text-gray-700 mb-6 leading-relaxed">
-				Welcome to our digital guestbook! This is a SvelteKit + Supabase deployment sample for Navegante,
-				demonstrating a modern take on the classic website guestbook where visitors can leave messages,
-				share their thoughts, and connect with others from around the world.
+				Welcome to our digital guestbook! This is a SvelteKit + Supabase deployment sample for
+				Navegante, demonstrating a modern take on the classic website guestbook where visitors can
+				leave messages, share their thoughts, and connect with others from around the world.
 			</p>
 
 			<div class="grid md:grid-cols-2 gap-8 mb-8">

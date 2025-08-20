@@ -1,20 +1,14 @@
 <script lang="ts">
+	import type { GuestbookMessage } from '$lib/database';
+
 	interface Props {
-		message: {
-			id: number;
-			name: string;
-			email?: string;
-			message: string;
-			location?: string;
-			website?: string;
-			created_at: string;
-		};
+		message: GuestbookMessage;
 	}
 
 	let { message }: Props = $props();
 
-	function formatDate(dateString: string) {
-		return new Date(dateString).toLocaleDateString('en-US', {
+	function formatDate(date: Date) {
+		return date.toLocaleDateString('en-US', {
 			year: 'numeric',
 			month: 'long',
 			day: 'numeric',
@@ -57,8 +51,8 @@
 						</span>
 					{/if}
 				</div>
-				<time class="text-sm text-gray-500" datetime={message.created_at}>
-					{formatDate(message.created_at)}
+				<time class="text-sm text-gray-500" datetime={message.createdAt.toISOString()}>
+					{formatDate(message.createdAt)}
 				</time>
 			</div>
 

@@ -5,6 +5,7 @@ A SvelteKit + PostgreSQL deployment sample. This modern guestbook application de
 ## Purpose
 
 This repository serves as a deployment sample, showcasing:
+
 - How to structure a SvelteKit application for deployment
 - Integration with PostgreSQL for database operations
 - Best practices for environment configuration
@@ -84,9 +85,11 @@ PORT=3000
 ```
 
 **Required Variables:**
+
 - `DATABASE_URL` - Your PostgreSQL connection string
 
 **Optional Variables:**
+
 - `NODE_ENV` - Environment mode (development, production)
 - `PORT` - Port number for the application (defaults to 3000)
 
